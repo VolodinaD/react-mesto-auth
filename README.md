@@ -10,6 +10,8 @@
 
 Проект реализован на React.
 
+Пользователю необходимо зарегистрироваться и авторизоваться, чтобы перейти на основную страницу.
+
 **GitHub Pages**
 
-* [Ссылка на на GitHub Pages](https://volodinad.github.io/mesto-react)
+* [Ссылка на на GitHub Pages](https://volodinad.github.io/react-mesto-auth)
