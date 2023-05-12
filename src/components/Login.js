@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../index.css';
 import Header from './Header.js';
 import FormForAuth from './FormForAuth.js';
-import * as auth from '../utils/auth.js';
 
 function Login(props) {
-    const navigate = useNavigate(); 
-
     const [formValue, setFormValue] = React.useState({
         email: '',
         password: ''
@@ -28,15 +25,8 @@ function Login(props) {
         if (!formValue.email || !formValue.password) {
             return;
         } else {
-            auth.authorize(formValue)
-                .then((data) => {
-                    if (data.token) {
-                        setFormValue({email: '', password: ''});
-                        props.handleLogin();
-                        navigate('/', {replace: true});
-                    }
-                })
-                .catch((err) => console.log(err));
+            props.onLogin(formValue);
+            setFormValue({email: '', password: ''});
         }
     }
 
