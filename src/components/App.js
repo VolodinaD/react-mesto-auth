@@ -162,6 +162,7 @@ function App() {
     auth.register(formValue)
       .then((res) => {
         if (res.data) {
+          navigate('/sign-in', {replace: true});
           setInfoTooltipPopupOpen(true);
           setInfoTooltipPopupImage(successfulInfoImage);
           setInfoTooltipPopupText('Вы успешно зарегистрировались!');

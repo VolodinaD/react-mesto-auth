@@ -39,8 +39,8 @@ function Login(props) {
             </Header>
             <FormForAuth name="register" title="Вход" buttonText="Войти" text="" onSubmit={handleSubmit}>
                 <>
-                    <input type="email" name="email" id="email-input" placeholder="Email" className="auth-form__input auth-form__input_type_email" onChange={handleChange} />
-                    <input type="password" name="password" id="password-input" placeholder="Пароль" className="auth-form__input auth-form__input_type_password" onChange={handleChange} />
+                    <input type="email" name="email" id="email-input" placeholder="Email" className="auth-form__input auth-form__input_type_email" value={formValue.email} onChange={handleChange} />
+                    <input type="password" name="password" id="password-input" placeholder="Пароль" className="auth-form__input auth-form__input_type_password" value={formValue.password} onChange={handleChange} />
                 </>
             </FormForAuth>
         </>
